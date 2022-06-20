@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App(a) {
+  console.log(a);
   return (
     <div className="App">
       <header className="App-header">
@@ -17,6 +18,9 @@ function App() {
         >
           Learn React
         </a>
+        <button onclick>
+          hya thich
+        </button>
       </header>
     </div>
   );
