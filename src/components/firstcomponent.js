@@ -16,11 +16,23 @@ const First = (props) => {
         {props.subjects.map((s) => (
           <li>{s}</li>
         ))}
-        <li>one</li>
+        <li>Nepali</li>
       </ol>
-      his location is <strong>{props.location.latitude}N {props.location.longitude}</strong>
+      his location is{" "}
+      <strong>
+        {props.location.latitude}N {props.location.longitude}
+      </strong>
     </div>
   );
 };
-
+const Second = () => {
+  return (
+    <div>
+      <h1>This is the second component</h1>
+      Register Batch = {"074"}
+      Faculty = {"BEX"}
+    </div>
+  );
+};
+export { Second };
 export default First;
