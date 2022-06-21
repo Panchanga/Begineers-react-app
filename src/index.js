@@ -8,7 +8,11 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     
-    <App name = {'MERN'} address = "test"/>
+    <App name = {'MERN'} address = "test"
+    onSubmit={() => console.log("submited")}
+    />
+    
+    
   </React.StrictMode>
 );
 

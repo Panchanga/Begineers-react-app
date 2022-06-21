@@ -1,27 +1,23 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import First from './components/firstcomponent';
 
-function App(a) {
-  console.log(a);
+function App(props) {
+  console.log(props, "App  props");
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        <button onclick>
-          hya thich
-        </button>
-      </header>
+      <First
+      title ={'this is first component'}
+      name= {'panchey'}
+      age ={22}
+      subjects = {['physics ','math','science']}
+      location = {{
+        latitude : 55.2,
+        longitude: 33.33,
+       
+      }}
+       gender ={'M'}
+      isStudent={true} />
     </div>
   );
 }
