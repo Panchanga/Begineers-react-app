@@ -1,23 +1,36 @@
 // import logo from './logo.svg';
 import './App.css';
-import First from './components/firstcomponent';
+import First, {Second} from './components/firstcomponents';
+//import Second from './components/firstcomponents';
+import Register from './components/StudentRegister';
+import {STUDENTS} from './constants';
+import Counter from './components/Counter';
 
-function App(props) {
-  console.log(props, "App  props");
+function App() {
+  // console.log(props,"App props");
   return (
     <div className="App">
-      <First
-      title ={'this is first component'}
-      name= {'panchey'}
+     <First 
+      title={'This is the first component'}
+      name= {'Soujanya Subedi'}
       age ={22}
-      subjects = {['physics ','math','science']}
-      location = {{
-        latitude : 55.2,
-        longitude: 33.33,
-       
+      subjects={['Physics','EM','ECT','EDC','Microprocessor']}
+      isStudent={true}
+      location ={{
+          state: 3,
+          district: 'Bhaktapur',
+          city: 'Kausaltar'
       }}
-       gender ={'M'}
-      isStudent={true} />
+      gender={'M'}
+      />
+    <Second />
+    <Register 
+        Batch={'074'}
+        Faculty={'BEX'}
+        College= {'KEC'}
+         Students={STUDENTS}
+         />
+         <Counter />
     </div>
   );
 }
